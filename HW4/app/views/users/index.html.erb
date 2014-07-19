@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<h3>Users Page</h3>
+
+<ul>
+	<% @user.all.each do |u| %>
+		<li>
+			<%= "#{u.fname} #{u.lname}" %><br>
+			<%= "#{u.posts.last.title}" %><br>
+			<%= "#{u.posts.last.body}" %>
+		</li>
+	<% end %>
+</ul>

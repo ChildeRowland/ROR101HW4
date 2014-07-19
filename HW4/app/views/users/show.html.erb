@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<h3><%= "#{@user.fname}'s Page" %></h3>
+
+<h4>Posts:</h4>
+
+<ul>
+	<% @user.posts.all.each do |p| %>
+	<li>
+		<%= p.title %><br>
+		<%= p.body %>
+	</li>
+	<% end %>
+</ul>
