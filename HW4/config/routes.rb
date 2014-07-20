@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index', as: :user
 
+  get 'users/:id/posts' => 'users#user_show_posts'
+
   get '/posts' => 'posts#index', as: :posts
 
   resources :users do
