@@ -3,9 +3,9 @@
 <h3>Users Page</h3>
 
 <ul>
-	<% @user.all.each do |u| %>
+	<% @users.all.each do |u| %>
 		<li>
-			<%= "#{u.fname} #{u.lname}" %><br>
+			<%= "#{u.fname} #{u.lname} - #{u.id}" %><br>
 			<%= "#{u.posts.last.title}" %><br>
 			<%= "#{u.posts.last.body}" %>
 		</li>

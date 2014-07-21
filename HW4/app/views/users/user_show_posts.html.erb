@@ -1,3 +1,10 @@
 <!DOCTYPE html>
 
-<%= @user.posts.last %>
+<ul>
+	<% @user.posts.reverse.each do |p| %>
+	<li>
+		<%= p.title %><br>
+		<%= p.body %>
+	</li>
+	<% end %>
+</ul>
