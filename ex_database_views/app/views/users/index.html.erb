@@ -3,5 +3,11 @@
 <h3>Users Page</h3>
 
 <% @users.each do |u| %>
-	<%= u.fname %> <%= u.lname %><br> 
+	<%= u.fname %> <%= u.lname %> <%= u.id %><br> 
+<% end %>
+
+<%= form_tag("/search", method: "get") do %>
+	<%= label_tag(:query, "Search for:") %>
+	<%= text_field_tag(:query) %>
+	<%= submit_tag("Submit") %>
 <% end %>

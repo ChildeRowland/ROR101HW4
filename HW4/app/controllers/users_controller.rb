@@ -15,15 +15,13 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		
-		puts "params are:" + params.inspect
-
-		# u = User.find(params[:id])
-		# if u.delete
-		# 	flash[:notice] = "User has been deleted."
-		# else
-		# 	flash[:notice] = "Something went wrong."
-		# end
+		u = User.find(params[:id])
+		if u.delete
+			flash[:notice] = "User has been deleted."
+			redirect_to home_path
+		else
+			flash[:notice] = "Something went wrong."
+		end
 	end
 
 end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index', as: :home
 
-  get '/users' => 'users#index', as: :user
+  # get '/users' => 'users#index', as: :user
 
   get 'users/:id/posts' => 'users#user_show_posts'
 
